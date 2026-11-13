@@ -7,3 +7,6 @@ out
 next-env.d.ts
 .vercel
 *.zip
+.claude
+# cópia extraída do .zip (não faz parte do projeto)
+/alphaflow-digital/
