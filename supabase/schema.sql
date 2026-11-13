@@ -38,10 +38,13 @@ create trigger on_auth_user_created after insert on auth.users
   for each row execute function public.handle_new_user();
 
 -- Impede que um cliente altere o próprio papel (role).
+-- auth.uid() é nulo no SQL Editor e na service role (contextos confiáveis), então
+-- a trava vale apenas para usuários logados pelo site. Visitantes anônimos já
+-- são bloqueados pela política de RLS de update.
 create or replace function public.protect_profile_role()
 returns trigger language plpgsql security definer set search_path = public as $$
 begin
-  if new.role is distinct from old.role and not public.is_admin() then
+  if new.role is distinct from old.role and auth.uid() is not null and not public.is_admin() then
     raise exception 'Somente administradores podem alterar papéis.';
   end if;
   new.updated_at := now();
