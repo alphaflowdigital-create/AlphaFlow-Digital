@@ -36,9 +36,14 @@ export function Hero() {
 
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         <div>
-          <p className="pill hero-in" style={d(0)}>
-            <span className="rounded-full bg-white px-1.5 py-px text-[10px] font-bold tracking-wider text-ink-950">WEB</span>
-            ALPHAFLOW DIGITAL — DESENVOLVIMENTO WEB
+          <p className="hero-badge hero-in" style={d(0)}>
+            <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white shadow-[0_0_18px_rgba(255,255,255,0.5)]">
+              <img src="/brand/logo-mark.png" alt="" width={256} height={199} className="h-3 w-auto invert" />
+            </span>
+            <span className="whitespace-nowrap text-[9.5px] font-semibold tracking-[0.1em] text-white sm:text-[11px] sm:tracking-[0.18em]">ALPHAFLOW DIGITAL</span>
+            <span className="h-3.5 w-px shrink-0 bg-gradient-to-b from-transparent via-white/40 to-transparent" aria-hidden />
+            <span className="sr-only"> — </span>
+            <span className="whitespace-nowrap text-[9.5px] font-medium tracking-[0.1em] text-mute sm:text-[11px] sm:tracking-[0.18em]">DESENVOLVIMENTO WEB</span>
           </p>
 
           <h1 id="hero-title" className="hero-in mt-7 text-[2.6rem] font-semibold leading-[1.02] text-white sm:text-6xl lg:text-[4.6rem]" style={d(90)}>

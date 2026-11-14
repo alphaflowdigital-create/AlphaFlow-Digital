@@ -86,6 +86,25 @@
     background: radial-gradient(closest-side, rgb(255 255 255 / 0.11), transparent);
   }
 
+  /* Etiqueta acima do título do hero: borda luminosa + reflexo que atravessa */
+  .hero-badge {
+    position: relative; isolation: isolate; overflow: hidden;
+    display: inline-flex; align-items: center; gap: .625rem;
+    padding: .3125rem .95rem .3125rem .3125rem; border-radius: 999px;
+    border: 1px solid transparent;
+    background:
+      linear-gradient(180deg, #151515, #0a0a0a) padding-box,
+      linear-gradient(90deg, rgb(255 255 255 / 0.10), rgb(255 255 255 / 0.55) 50%, rgb(255 255 255 / 0.10)) border-box;
+    box-shadow: 0 0 40px -10px rgb(255 255 255 / 0.35), inset 0 1px 0 rgb(255 255 255 / 0.08);
+  }
+  .hero-badge::after {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(105deg, transparent 35%, rgb(255 255 255 / 0.14) 50%, transparent 65%);
+    transform: translateX(-110%);
+    animation: badge-shine 5.5s ease-in-out infinite 1.2s;
+  }
+  @keyframes badge-shine { 0%, 35% { transform: translateX(-110%); } 75%, 100% { transform: translateX(110%); } }
+
   /* Grade de pontos (variação da grade de linhas) */
   .bg-dots {
     background-image: radial-gradient(rgb(255 255 255 / 0.09) 1px, transparent 1.2px);

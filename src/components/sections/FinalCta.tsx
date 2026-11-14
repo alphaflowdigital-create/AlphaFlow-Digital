@@ -16,9 +16,15 @@ export function FinalCta() {
           <img src="/brand/logo-mark.png" alt="" aria-hidden width={256} height={199} loading="lazy" className="pointer-events-none absolute -bottom-10 -right-6 w-56 opacity-[0.05] sm:w-80" />
 
           <Sparkle id="cta1" size={110} className="pointer-events-none absolute left-[5%] top-[12%] hidden animate-float-slow md:block" />
-          <Sparkle id="cta2" size={56} className="pointer-events-none absolute right-[8%] top-[18%] hidden animate-float [animation-delay:-3s] md:block" />
+          {/* letra α branca com halo — desktop, à direita */}
+          <div className="pointer-events-none absolute right-[4%] top-[10%] hidden w-28 rotate-[8deg] animate-float [animation-delay:-3s] xl:block" aria-hidden>
+            <div className="absolute inset-0 scale-125 rounded-full bg-white/[0.09] blur-3xl" />
+            <img src="/brand/alpha-glyph.png" alt="" width={256} height={208} loading="lazy" className="relative w-full drop-shadow-[0_0_24px_rgba(255,255,255,0.45)]" />
+          </div>
           <Sparkle id="cta3" size={38} className="pointer-events-none absolute bottom-[14%] left-[16%] hidden animate-float [animation-delay:-6s] md:block" />
           <div className="relative mx-auto max-w-3xl">
+            {/* letra α — celular, acima do título */}
+            <img src="/brand/alpha-glyph.png" alt="" aria-hidden width={256} height={208} loading="lazy" className="mx-auto mb-8 w-20 drop-shadow-[0_0_20px_rgba(255,255,255,0.45)] xl:hidden" />
             <h2 id="cta-title" className="text-chrome text-[2.1rem] font-semibold leading-[1.05] sm:text-5xl md:text-6xl">
               Seu próximo passo começa com uma presença digital profissional.
             </h2>
