@@ -46,7 +46,7 @@ function Comparison() {
 
 export function Pricing() {
   return (
-    <section id="planos" aria-labelledby="planos-title" className="relative overflow-hidden border-t border-line bg-ink-900 py-24 sm:py-32">
+    <section id="planos" aria-labelledby="planos-title" className="relative overflow-hidden border-t border-line section-alt py-24 sm:py-32">
       <div className="bg-grid mask-radial pointer-events-none absolute inset-0 opacity-70" aria-hidden />
       <div className="pointer-events-none absolute left-1/2 top-[30%] h-[520px] w-[760px] -translate-x-1/2 rounded-full bg-white/[0.05] blur-[130px]" aria-hidden />
       <div className="container-x relative">

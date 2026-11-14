@@ -10,7 +10,7 @@ export function Faq() {
   const base = useId();
 
   return (
-    <section id="faq" aria-labelledby="faq-title" className="relative border-t border-line bg-ink-900 py-24 sm:py-32">
+    <section id="faq" aria-labelledby="faq-title" className="relative border-t border-line section-alt py-24 sm:py-32">
       <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <Eyebrow>FAQ</Eyebrow>

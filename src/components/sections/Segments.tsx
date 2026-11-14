@@ -16,7 +16,7 @@ const SEGMENTS = [
 
 export function Segments() {
   return (
-    <section aria-labelledby="segmentos-title" className="relative overflow-hidden border-t border-line bg-ink-900 py-24 sm:py-32">
+    <section aria-labelledby="segmentos-title" className="relative overflow-hidden border-t border-line section-alt py-24 sm:py-32">
       <div className="bg-grid mask-fade-b pointer-events-none absolute inset-x-0 top-0 h-96 opacity-50" aria-hidden />
       <div className="container-x relative">
         <SectionHeading

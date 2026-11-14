@@ -13,10 +13,26 @@ const startMonthly = formatBRL(Math.min(...PLANS.map((p) => p.monthly)));
 
 export function Hero() {
   return (
-    <section id="inicio" aria-labelledby="hero-title" className="relative overflow-hidden pb-16 pt-32 sm:pt-36 lg:pb-24 lg:pt-40">
+    <section id="inicio" aria-labelledby="hero-title" className="relative overflow-hidden pb-28 pt-32 sm:pt-36 lg:pb-36 lg:pt-40">
       {/* fundo: grade + luz superior */}
       <div className="bg-grid mask-radial pointer-events-none absolute inset-0" aria-hidden />
       <div className="pointer-events-none absolute -top-40 left-1/2 h-[520px] w-[900px] -translate-x-1/2 rounded-full bg-white/[0.07] blur-[120px]" aria-hidden />
+
+      {/* feixes de luz vindos do topo */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[760px] overflow-hidden" aria-hidden>
+        <div className="absolute left-[18%] top-[-120px] h-[900px] w-[220px] origin-top rotate-[24deg] bg-gradient-to-b from-white/[0.17] via-white/[0.04] to-transparent blur-2xl" />
+        <div className="absolute left-[40%] top-[-120px] h-[820px] w-[120px] origin-top rotate-[12deg] bg-gradient-to-b from-white/[0.12] via-white/[0.03] to-transparent blur-xl" />
+        <div className="absolute right-[22%] top-[-120px] h-[880px] w-[180px] origin-top -rotate-[18deg] bg-gradient-to-b from-white/[0.14] via-white/[0.035] to-transparent blur-2xl" />
+      </div>
+
+      {/* horizonte: arco luminoso na base do hero */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[150px] overflow-hidden" aria-hidden>
+        <div className="absolute left-1/2 top-[100px] h-[1400px] w-[2400px] -translate-x-1/2 rounded-[50%] border-t border-white/40 bg-[radial-gradient(ellipse_50%_8%_at_50%_0%,rgba(255,255,255,0.16),transparent)] shadow-[0_-30px_80px_-20px_rgba(255,255,255,0.3)]" />
+        <div className="absolute left-1/2 top-[98px] h-[3px] w-[38%] -translate-x-1/2 rounded-full bg-white/90 blur-[3px]" />
+      </div>
+
+      {/* pontos de luz */}
+      <div className="bg-dots pointer-events-none absolute right-0 top-24 hidden h-[420px] w-[420px] [mask-image:radial-gradient(closest-side,#000,transparent)] lg:block" aria-hidden />
 
       <div className="container-x relative grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         <div>

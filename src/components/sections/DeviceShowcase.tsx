@@ -60,7 +60,7 @@ export function DeviceShowcase() {
     { icon: Monitor, t: "Computador", d: "Apresentação completa, com espaço para cada detalhe." },
   ];
   return (
-    <section aria-labelledby="telas-title" className="relative overflow-hidden border-t border-line bg-ink-900 py-24 sm:py-32">
+    <section aria-labelledby="telas-title" className="relative overflow-hidden border-t border-line section-alt py-24 sm:py-32">
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[560px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/[0.05] blur-[130px]" aria-hidden />
       <div className="container-x relative grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
         <div>

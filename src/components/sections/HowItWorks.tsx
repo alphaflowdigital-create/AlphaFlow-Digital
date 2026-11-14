@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" aria-labelledby="como-title" className="relative border-t border-line bg-ink-900 py-24 sm:py-32">
+    <section id="como-funciona" aria-labelledby="como-title" className="relative border-t border-line section-alt py-24 sm:py-32">
       <div className="container-x">
         <SectionHeading
           id="como-title"

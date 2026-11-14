@@ -15,7 +15,7 @@ export function Footer() {
   const place = [business.city, business.state].filter(Boolean).join(" — ");
 
   return (
-    <footer className="relative overflow-hidden border-t border-line bg-ink-900 pb-28 pt-20 lg:pb-0">
+    <footer className="relative overflow-hidden border-t border-line section-alt pb-28 pt-20 lg:pb-0">
       <div className="container-x grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.2fr]">
         <div>
           <LogoStacked className="h-20 w-auto" />

@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/config";
 import { CookieConsent } from "@/components/layout/CookieConsent";
 import { OrganizationJsonLd } from "@/components/seo/JsonLd";
+import { BackgroundFX } from "@/components/layout/BackgroundFX";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap", weight: ["500", "600", "700", "800"] });
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR" className={`${inter.variable} ${manrope.variable}`}>
       <body className="min-h-dvh bg-ink-950">
         <OrganizationJsonLd />
+        <BackgroundFX />
         {children}
         <CookieConsent gaId={siteConfig.gaId} />
       </body>

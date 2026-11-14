@@ -60,6 +60,38 @@
     -webkit-background-clip: text; background-clip: text; color: transparent;
   }
 
+  /* Granulação fina sobre toda a página */
+  .grain {
+    opacity: 0.08;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Seções alternadas: tom levemente mais claro, translúcido para deixar o fundo global aparecer */
+  .section-alt {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgb(255 255 255 / 0.06), transparent 70%),
+      linear-gradient(180deg, rgb(11 11 11 / 0.82), rgb(11 11 11 / 0.6));
+  }
+
+  /* Divisor luminoso entre seções */
+  main > section { position: relative; }
+  main > section + section::before {
+    content: ""; position: absolute; top: 0; left: 50%; z-index: 1; translate: -50% 0;
+    width: min(1100px, 90%); height: 1px; pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.38) 50%, transparent);
+  }
+  main > section + section::after {
+    content: ""; position: absolute; top: -40px; left: 50%; translate: -50% 0; z-index: 0;
+    width: min(600px, 70%); height: 80px; pointer-events: none;
+    background: radial-gradient(closest-side, rgb(255 255 255 / 0.11), transparent);
+  }
+
+  /* Grade de pontos (variação da grade de linhas) */
+  .bg-dots {
+    background-image: radial-gradient(rgb(255 255 255 / 0.09) 1px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+
   /* Grade técnica de fundo */
   .bg-grid {
     background-image:

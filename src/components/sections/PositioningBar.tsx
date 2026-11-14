@@ -3,7 +3,7 @@ import { POSITIONING } from "@/content/site";
 export function PositioningBar() {
   const items = [...POSITIONING, ...POSITIONING];
   return (
-    <section aria-label="Nosso posicionamento" className="border-y border-line bg-ink-900/60">
+    <section aria-label="Nosso posicionamento" className="border-y border-line bg-ink-900/40 backdrop-blur-sm">
       <div className="mask-fade-x overflow-hidden py-6">
         <ul className="flex w-max animate-marquee items-center gap-14 pr-14 hover:[animation-play-state:paused] motion-reduce:animate-none">
           {items.map(({ label, icon: Icon }, i) => (
